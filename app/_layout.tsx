@@ -11,7 +11,7 @@ SplashScreen.preventAutoHideAsync();
 function ThemedLayout() {
 
   return (
-    <View style={{ flex: 1, backgroundColor: colors.white.base }}>
+    <View style={{ flex: 1, backgroundColor: colors.white.dark }}>
       <Slot />
     </View>
   );

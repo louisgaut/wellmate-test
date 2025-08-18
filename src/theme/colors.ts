@@ -44,18 +44,21 @@ const palette = {
 };
 
 const colors = {
-    text:{
+    text: {
         base: palette.black.dark, //couleur des textes importants
         light: palette.black.extraLight //couleur pour les textes secondaires comme les remarques, petites infos...
     },
 
-    background:{
+    background: {
         page: palette.white.base, //tous les fonds de page
         card: palette.white.light //tous les fonds de cartes/composants
     },
 
-    icon: palette.black.base, //couleur par défaut des icônes
-
+    icon: {
+        light: palette.white.light, //couleur par défaut des icônes clairs
+        base: palette.black.base, //couleur par défaut des icônes foncés
+    },
+    
     pro: {
         light: palette.pro.light,
         base: palette.pro.base,

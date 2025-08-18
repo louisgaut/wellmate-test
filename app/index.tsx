@@ -1,5 +1,5 @@
-import ThemedText from "@/src/elements/ThemedText";
 import { View } from "react-native";
+import NavBar from "@/src/components/navigation/NavBar";
 
 export default function Index() {
 
@@ -11,7 +11,7 @@ export default function Index() {
         alignItems: "center",
       }}
     >
-        <ThemedText content="Bienvenue sur WellMate" />
+        <NavBar type="pro"/>
     </View>
   );
 }
