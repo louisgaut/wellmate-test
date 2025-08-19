@@ -3,8 +3,9 @@ import useTheme from "@/src/hooks/useTheme";
 import icons from "@/src/theme/icons";
 import { AppType } from "@/src/types/app";
 import { useEffect, useMemo, useState } from "react";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet } from "react-native";
 import Animated, { useAnimatedStyle, useSharedValue, withTiming } from 'react-native-reanimated';
+import { BlurView } from 'expo-blur';
 
 type Props = { type: AppType }
 
@@ -30,13 +31,12 @@ export default function NavBar({ type }: Props) {
         () =>
             StyleSheet.create({
                 mainContainer: {
-                    backgroundColor: colors.background.card,
                     borderRadius: 999,
                     flexDirection: "row",
                     alignItems: "center",
                     justifyContent: "space-between",
                     gap: 24,
-                    padding: 2
+                    padding: 2,
                 },
                 selectedContainer: {
                     backgroundColor: type === "pro" ? colors.pro.base : colors.training.base,
@@ -73,8 +73,9 @@ export default function NavBar({ type }: Props) {
 
 
     return (
-        <View
+        <BlurView
             style={styles.mainContainer}
+            intensity={40}
         >
             <Animated.View
                 style={[styles.selectedContainer, animatedStyles]}
@@ -92,6 +93,6 @@ export default function NavBar({ type }: Props) {
                     />
                 )
             })}
-        </View>
+        </BlurView>
     )
 }

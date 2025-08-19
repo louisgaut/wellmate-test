@@ -3,26 +3,26 @@ import { Text, TextProps } from "react-native"
 import useTheme from "../hooks/useTheme"
 
 const styles = {
-    bodySmall: typography.body.small,
+    regularS: typography.regular.s,
 
-    bodySmallBold: typography.body.smallBold,
+    regularM: typography.regular.m,
 
-    bodyBase: typography.body.base,
+    regularL: typography.regular.l,
 
-    bodyBaseBold: typography.body.baseBold,
+    regularXL: typography.regular.xl,
 
-    labelSmall: typography.label.small,
+    semiBoldS: typography.semiBold.s,
 
-    labelBase: typography.label.base,
+    semiBoldM: typography.semiBold.m,
 
-    title: typography.title,
+    semiBoldL: typography.semiBold.l,
 
-    headline: typography.headline,
+    semiBoldXL: typography.semiBold.xl,
 }
 
 type Props = {content: string, variant?: keyof typeof styles} & TextProps
 
-export default function ThemedText({content, variant = 'bodyBase', style, ...textProps}:Props){
+export default function ThemedText({content, variant = 'regularM', style, ...textProps}:Props){
     const colors = useTheme()
     return(
         <Text style={[styles[variant], {color:colors.black.dark} ,style]} {...textProps}>{content}</Text>

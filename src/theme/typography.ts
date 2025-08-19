@@ -1,45 +1,50 @@
+const sSize = 12;
+const mSize = 14;
+const lSize = 18;
+const xlSize = 24;
+
+const normal = "PlusJakartaSans-Regular";
+const bold = "PlusJakartaSans-SemiBold";
+
 const typography = {
 
-    body: {
-        small: {
-            fontSize: 12,
-            fontFamily: "PlusJakartaSans-Regular",
+    regular: {
+        s: {
+            fontSize: sSize,
+            fontFamily: normal,
         },
-        smallBold: {
-            fontSize: 12,
-            fontFamily: "PlusJakartaSans-Medium",
+        m: {
+            fontSize: mSize,
+            fontFamily: normal,
         },
-        base: {
-            fontSize: 14,
-            fontFamily: "PlusJakartaSans-Regular",
+        l: {
+            fontSize: lSize,
+            fontFamily: normal,
         },
-        baseBold: {
-            fontSize: 14,
-            fontFamily: "PlusJakartaSans-Medium",
-        },
-    },
-
-    label: {
-        small: {
-            fontSize: 12,
-            fontFamily: "PlusJakartaSans-Regular",
-        },
-        base: {
-            fontSize: 14,
-            fontFamily: "PlusJakartaSans-Regular",
+        xl: {
+            fontSize: xlSize,
+            fontFamily: normal,
         },
     },
 
-    title: {
-        fontSize: 20,
-        fontFamily: "PlusJakartaSans-SemiBold",
+    semiBold: {
+        s: {
+            fontSize: sSize,
+            fontFamily: bold,
+        },
+        m: {
+            fontSize: mSize,
+            fontFamily: bold,
+        },
+        l: {
+            fontSize: lSize,
+            fontFamily: bold,
+        },
+        xl: {
+            fontSize: xlSize,
+            fontFamily: bold,
+        },
     },
-
-    headline: {
-        fontSize: 24,
-        fontFamily: "PlusJakartaSans-Bold",
-    }
-
 };
 
 export default typography;
