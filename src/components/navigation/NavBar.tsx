@@ -28,8 +28,8 @@ export default function NavBar({ type }: Props) {
     //styles
     const colors = useTheme()
     const styles = useMemo(
-        () =>
-            StyleSheet.create({
+        () => {
+            return StyleSheet.create({
                 mainContainer: {
                     borderRadius: 999,
                     flexDirection: "row",
@@ -45,8 +45,9 @@ export default function NavBar({ type }: Props) {
                     height: 48,
                     position: "absolute",
                 }
-            }),
-        [colors, type]
+            })
+        },
+        [colors, type ]
     );
 
     //States
@@ -57,10 +58,10 @@ export default function NavBar({ type }: Props) {
     //Animation
     const positionX = useSharedValue(0)
 
-    useEffect(()=>{
-        const target = navIndex*(48+24)
-        positionX.value = withTiming(target,{duration: 200});
-    },[navIndex , positionX])
+    useEffect(() => {
+        const target = navIndex * (48 + 24)
+        positionX.value = withTiming(target, { duration: 200 });
+    }, [navIndex, positionX])
 
     const animatedStyles = useAnimatedStyle(() => ({
         transform: [{ translateX: positionX.value }],
@@ -75,7 +76,7 @@ export default function NavBar({ type }: Props) {
     return (
         <BlurView
             style={styles.mainContainer}
-            intensity={40}
+            intensity={100}
         >
             <Animated.View
                 style={[styles.selectedContainer, animatedStyles]}

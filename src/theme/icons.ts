@@ -13,6 +13,7 @@ const icons = {
   eye: "eye-outline",
   eyeOff: "eye-off-outline",
   lock: "lock-closed-outline",
+  check: "checkmark-outline",
 
   people:"people-outline",
   calendar: "calendar-outline",

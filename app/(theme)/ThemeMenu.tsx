@@ -39,6 +39,7 @@ export default function ThemeMenu() {
         { title: "Espacements", route: "/(theme)/Spacing", icon: "resize-outline" as const },
         { title: "Border Radius", route: "/(theme)/Radii", icon: "radio-button-off-outline" as const },
         { title: "Ombres", route: "/(theme)/Shadows", icon: "layers-outline" as const },
+        { title: "Eléments", route: "/(theme)/Elements", icon: "cube-outline" as const },
     ];
 
     return (
